@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080f20" />
+  <title>Pokédex | Async Odyssey</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav"><a href="#inicio" class="brand"><span class="ball">◉</span> PokéDex</a><nav><a href="#inicio">Inicio</a><a href="#estadisticas">Estadísticas</a><a href="#acerca">Acerca de</a></nav><button id="themeToggle" class="icon-button" aria-label="Cambiar tema">☾</button></div>
+  </header>
+  <main id="inicio" class="shell">
+    <section class="intro"><div><p class="eyebrow">ASYNC ODYSSEY · M2</p><h1>Explora el mundo Pokémon</h1><p>Busca, filtra y descubre estadísticas de los Pokémon.</p></div><div id="estadisticas" class="metrics" aria-live="polite"></div></section>
+    <section class="toolbar" aria-label="Búsqueda y filtros"><label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar Pokémon por nombre o número..." aria-label="Buscar Pokémon" /></label><label>Tipo <select id="typeFilter"><option value="all">Todos los tipos</option></select></label><label>Ordenar por <select id="sortSelect"><option value="id-asc">Número (asc.)</option><option value="id-desc">Número (desc.)</option><option value="name">Nombre (A-Z)</option><option value="attack">Mayor ataque</option><option value="hp">Mayor HP</option><option value="defense">Mayor defensa</option></select></label><button id="loadMore" class="primary">↻ Cargar más</button></section>
+    <div id="status" role="status" aria-live="polite"></div><section id="pokemonGrid" class="pokemon-grid" aria-label="Lista de Pokémon"></section>
+    <section id="acerca" class="about"><h2>Sobre esta Pokédex</h2><p>Proyecto educativo desarrollado con Vite, módulos ES y la API pública <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>. Los filtros y estadísticas trabajan sobre los Pokémon cargados, no sobre el catálogo completo.</p></section>
+  </main>
+  <dialog id="detailDialog" aria-label="Detalles del Pokémon"><button id="closeDetail" class="close" aria-label="Cerrar detalles">✕</button><div id="detailContent"></div></dialog>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
